@@ -11,16 +11,16 @@ width :1440px;
 height:600px;
 Top: 69px;
 Left :23px;  
-transition: width 2s,height 5s;
+/* transition: width 2s,height 5s; */
 
 }
-.New-Banner:hover{
+/* .New-Banner:hover{
 width:700px;
 height:600px;
 background-color: yellow;
 
 
-}
+} */
 
 
 
@@ -113,4 +113,43 @@ justify-content: center;
 .socials li
 {
     margin: 0 10px;
+}
+/* -------------------------------
+Media Queries 
+---------------------------------*/
+/* Mobile Devices */
+@media only screen and (max-width:688px) {
+    .Players
+    {
+
+        grid-template-columns: repeat(1,1fr);
+        
+
+    }
+    .New-Banner
+    {
+
+      display: block;  
+width:120%;
+height: 695px;
+left: 0px;
+top: 0px;
+
+    }
+    .Banner{
+
+    display: block;
+    }
+    .Banner-Photo img{
+        width: 500px;
+        height:300px
+        
+    }
+    .Heading-Anchor
+    {
+
+        padding-left: 60px;
+    }
+
+    
 }
