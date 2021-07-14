@@ -136,6 +136,76 @@ margin-left: 120px;
 }
 /* Latest videos part css end */
 
+/* Statistics Part Start */
+.Tournament-Stats
+{
+
+background-color: purple;
+}
+
+.Statistics
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.Stats-Heading
+{
+    color: white;
+    text-align: center;
+}
+.Match{
+    color: white;
+}
+.Total{
+color:yellowgreen;
+font-size: 30px;
+
+}
+
+.Statistics-1
+{
+    display: block;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+    border:2px solid silver;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+.Statistics-2
+{
+    display: block;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+    border:2px solid silver;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+.Statistics-3
+{
+    display: block;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+    border:2px solid silver;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+.Statistics-4
+{
+    display: block;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+    border:2px solid silver;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+/* Statistics part end */
+
 /* Footer Part Css Start */
 footer
 {
