@@ -52,9 +52,12 @@ border-radius: 5px;
 {
 display: grid;
 grid-template-columns: repeat(3,1fr);
+word-wrap: nowrap;
+
 }
 .Player img{
-width: 330px;
+width: 350px;
+
 
 
 }
@@ -63,7 +66,25 @@ width: 330px;
     margin-top: 50px ;
     padding-left: 100px;
 }
-.Player P{
+.Player{
+width:330px;
+height:474px;
+Top:747px;
+left: 180px;
+padding: 15px;
+background-color:  #FFFFFF;
 
-    word-wrap: break-word;
+}
+footer
+{
+
+    text-align: center;
+   
+}
+footer img{
+
+    width: 383.87px;
+height: 110px;
+left: 0px;
+top: 0px;
 }
