@@ -4,7 +4,7 @@ body{
 }
 .New-Banner
 {
-background-color: darkblue;
+background-color: #2D25A0;
 
 
 width :1440px; 
@@ -17,6 +17,7 @@ Left :23px;
 .heading
 {
 color:white;
+font size:
 }
 
 .Banner-Photo img{
@@ -53,6 +54,7 @@ border-radius: 5px;
 display: grid;
 grid-template-columns: repeat(3,1fr);
 word-wrap: nowrap;
+grid-row-gap: 27px;
 
 }
 .Player img{
@@ -70,9 +72,10 @@ width: 350px;
 width:330px;
 height:474px;
 Top:747px;
-left: 180px;
-padding: 15px;
-background-color:  #FFFFFF;
+left: 900px;
+padding: 15px 35px 0px 15px;
+box-shadow: 0px 0px 40px silver ;
+border-radius:0%;
 
 }
 footer
@@ -87,4 +90,15 @@ footer img{
 height: 110px;
 left: 0px;
 top: 0px;
+}
+.socials{
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.socials li
+{
+    margin: 0 10px;
 }
