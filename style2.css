@@ -11,9 +11,19 @@ width :1440px;
 height:600px;
 Top: 69px;
 Left :23px;  
+transition: width 2s,height 5s;
+
+}
+.New-Banner:hover{
+width:700px;
+height:600px;
+background-color: yellow;
 
 
 }
+
+
+
 .heading
 {
 color:white;
@@ -41,6 +51,7 @@ font size:
 .link-button
 {
 text-decoration: none;
+color:white;
 background-image: linear-gradient(yellow,orange);
 width: 168px;
 padding: 10px 24px 10px 24px;
@@ -82,6 +93,7 @@ footer
 {
 
     text-align: center;
+    margin-top: 100px;
    
 }
 footer img{
