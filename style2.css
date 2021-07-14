@@ -11,16 +11,16 @@ width :1440px;
 height:600px;
 Top: 69px;
 Left :23px;  
-/* transition: width 2s,height 5s; */
+transition: width 2s,height 5s; 
 
 }
-/* .New-Banner:hover{
+.New-Banner:hover{
 width:700px;
 height:600px;
 background-color: yellow;
 
 
-} */
+} 
 
 
 
@@ -59,7 +59,7 @@ font-weight: 700;
 border-radius: 5px;
 
 }
-/* 2nd section start */
+/* Player Part Css start */
 .Players
 {
 display: grid;
@@ -89,6 +89,8 @@ box-shadow: 0px 0px 40px silver ;
 border-radius:0%;
 
 }
+/* Player part css end */
+/* Footer Part Css Start */
 footer
 {
 
@@ -114,6 +116,8 @@ justify-content: center;
 {
     margin: 0 10px;
 }
+/* Footer Part Css End */
+
 /* -------------------------------
 Media Queries 
 ---------------------------------*/
@@ -153,3 +157,24 @@ top: 0px;
 
     
 }
+/* tablet devices */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .Players
+    {
+
+        grid-template-columns: repeat(2,1fr);
+        
+
+    }
+    .Banner-Photo img{
+
+padding-right: 400px;
+    }
+    
+    .Heading-Anchor
+    {
+
+        padding-left: 60px;
+    }
+}
+/* Media Queries End */
