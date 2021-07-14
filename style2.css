@@ -76,6 +76,7 @@ width: 350px;
 }
 .Legend-Players
 {
+    background-color: #FFFFFF;
     margin-top: 50px ;
     padding-left: 100px;
 }
@@ -90,6 +91,51 @@ border-radius:0%;
 
 }
 /* Player part css end */
+/* Latest videos part css start */
+.Latest-Videos
+{
+    margin-top: 30px;
+background-color:mediumaquamarine;
+}
+.Video-Heading
+{
+text-align: center;
+color:white;
+}
+.Videos
+{
+    display: flex;
+    
+}
+.video-1
+{
+display: block;
+padding: 10px;
+margin-bottom: 30px;
+text-align: justify;
+margin-left: 120px;
+
+
+}
+.video-2
+{
+
+    display: block;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+    
+}
+.video-1 h2
+{
+    color: white;
+}
+.video-2 h2{
+
+    color: white;
+}
+/* Latest videos part css end */
+
 /* Footer Part Css Start */
 footer
 {
