@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <header id="header" style="position: absolute; top: 0; left: 0;">
+        <ul list-style-type: style="color:white; font-weight: bold;list-style-type: none; display:flex; margin:10px; position:relative; right:0; top:0;">
+           <a href="index.html" style="text-decoration: none;"> <li style="font-weight: bold; font-size: 20px; padding:10px; cursor:pointer; color:white">Home</li></a>
+        </ul>
+    </header>
+    <main class="main-section">
+        <div class="admin-options">
+            <ul>
+                <li id="manageFood">Manage Food Items</li>
+                <li id="manageGallery">Manage Image Gallery</li>
+                <li id="manageAdmin">Add Admin</li>
+            </ul>
+        </div>
+        <div id="admin-option-food">
+            <h4>Add Food Item</h4>
+            <form id="add-food-form">
+                <input id="food-image" type="file" name="image" accept="image/png, image/gif, image/jpeg" required>
+                <input id="food-name" type="text" name="name" placeholder="Enter name" required>
+                <input id="food-price" type="Price" name="price" placeholder="Enter Price" type="number" required>
+                <input id="food-description" type="Description" name="description" type="text" placeholder="Give a description" required>
+                <input type="submit" id="add-food-items-btn">
+            </form>
+            <div id="update">
+                <h4 id="loading1">Loading.......</h4>
+
+            </div>
+            <div id="existing-food-items-div">
+
+                <h4 id="loading">Loading.......</h4>
+                <ul id="existing-food-items">
+
+                </ul>
+            </div>
+        </div>
+        <div id="admin-option-gallery" style="display:none">
+
+            <form  id="galleryForm" style="margin-left:20px; margin-top:20px">
+                <input id="galleryImage"type="file">
+                <input type="submit" id="addGalleryBtn">
+            </form>
+
+            <div id="existing-gallery-images-div">
+                <h4 id="loading2">Loading...</h4>
+                <ul id="existing-images">
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="add-admin-div" style="display:none">
+            <h4>Add an Admin</h4>
+            <form action="" id="admin-add-form">
+                <input id="regiEmail" type="email" placeholder="Enter email address" required>
+                <input id="regiPassword" type="password" placeholder="Enter password" required>
+                <input type="submit" id="addAdminBtn">
+            </form>
+
+        </div>
+    </main>
+    <script src="admin.js"></script>
+</body>
+
+</html>

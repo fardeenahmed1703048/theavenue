@@ -1,0 +1,62 @@
+.main-section{
+    /* height: 500px; */
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+   
+    
+}
+.admin-options{
+    background-color: teal;
+    height: 750px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    padding: 10px;
+    font-size: larger;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+}
+.admin-options li{
+
+   margin-top: 10px;
+    
+}
+
+.admin-options li:hover{
+
+    color:red;
+    
+}
+
+
+#admin-option-food,#admin-option-gallery, #add-admin-div{
+    background-color: rgb(0, 60, 128);
+    height: 730px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+}
+div.admin-option-food {
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+#add-admin-div, #existing-food-items-div, #existing-images{
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+#update, #existing-food-items-div{
+    margin: 10px;
+    padding: 10px;
+}

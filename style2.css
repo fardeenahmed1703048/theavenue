@@ -1,23 +1,27 @@
+.{
+    margin: 0;
+    padding: 0
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 body{
     font-family: 'Poppins', sans-serif;
 }
 .New-Banner
 {
-background-color: #2D25A0;
+background-image: url("images/foods/5\ \(2\).jpg");
 
-
+/* 
 width :1440px; 
 height:600px;
 Top: 69px;
-Left :23px;  
-transition: width 2s,height 5s; 
+Left :23px;   */
+/* transition: width 2s,height 5s;  */
 
 }
 .New-Banner:hover{
-width:700px;
+/* width:700px;
 height:600px;
-background-color: yellow;
+background-color: goldenrod; */
 
 
 } 
@@ -36,6 +40,7 @@ font size:
     Top: 153px;
     Left: 1291px;
     margin-top: 100px;
+    border-radius:10px
     
     
 }
@@ -59,8 +64,24 @@ font-weight: 700;
 border-radius: 5px;
 
 }
-/* Player Part Css start */
-.Players
+/*restaurant part css start*/
+.restaurant
+{
+    text-align: center;
+    font-style: oblique;
+    background-color:white;
+}
+.res{
+background-color: rgba(255, 217, 0, 0.315);
+}
+.restaurant1 img
+{
+    width: 983px;
+    height: 600px;
+}
+/*restaurant part css end*/
+/* Dish Part Css start */
+.foods
 {
 display: grid;
 grid-template-columns: repeat(3,1fr);
@@ -68,34 +89,74 @@ word-wrap: nowrap;
 grid-row-gap: 27px;
 
 }
-.Player img{
+.headingtop
+{
+    background-color: greenyellow;
+}
+.food img{
 width: 350px;
 
 
 
 }
-.Legend-Players
+.Legend-foods
 {
-    background-color: #FFFFFF;
+    background-color: white;
     margin-top: 50px ;
     padding-left: 100px;
+    text-align: center;
+    margin-bottom: 20px;
 }
-.Player{
+.food{
 width:330px;
 height:474px;
-Top:747px;
+top:747px;
 left: 900px;
 padding: 15px 35px 0px 15px;
 box-shadow: 0px 0px 40px silver ;
 border-radius:0%;
 
 }
-/* Player part css end */
+/* Dish part css end */
+/* pool part css start */
+.pool2
+{
+    display: flex;
+    background-color: grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+}
+.pool{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.pool img
+{
+    width: 583.87px;
+    height: 310px;
+    padding-top:  20px; 
+    padding-bottom: 20px ;
+}
+.pool1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+.pool1 h1{
+    background-color: gold;
+}
+.pool1 i{
+    background-color: rgba(255, 217, 0, 0.288);
+}
+/* pool part css start */
 /* Latest videos part css start */
 .Latest-Videos
 {
     margin-top: 30px;
-background-color:mediumaquamarine;
+background-color: gray;
+padding-bottom: 20px;
+padding-top: 20px;
 }
 .Video-Heading
 {
@@ -136,35 +197,35 @@ margin-left: 120px;
 }
 /* Latest videos part css end */
 
-/* Statistics Part Start */
-.Tournament-Stats
+/* packages Part Start */
+.total-packages
 {
 
-background-color: purple;
+background-color: slategray;
 }
 
-.Statistics
+.packages
 {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
 }
-.Stats-Heading
+.packages-heading
 {
     color: white;
     text-align: center;
 }
-.Match{
+.item{
     color: white;
 }
-.Total{
+.dishes{
 color:yellowgreen;
 font-size: 30px;
 
 }
 
-.Statistics-1
+.packages-1
 {
     display: block;
     padding: 30px;
@@ -174,7 +235,7 @@ font-size: 30px;
     border-radius: 20px;
     margin-right: 20px;
 }
-.Statistics-2
+.packages-2
 {
     display: block;
     padding: 30px;
@@ -184,7 +245,7 @@ font-size: 30px;
     border-radius: 20px;
     margin-right: 20px;
 }
-.Statistics-3
+.packages-3
 {
     display: block;
     padding: 30px;
@@ -194,7 +255,7 @@ font-size: 30px;
     border-radius: 20px;
     margin-right: 20px;
 }
-.Statistics-4
+.packages-4
 {
     display: block;
     padding: 30px;
@@ -204,15 +265,15 @@ font-size: 30px;
     border-radius: 20px;
     margin-right: 20px;
 }
-/* Statistics part end */
+/* packages part end */
 
 /* Footer Part Css Start */
 footer
 {
 
     text-align: center;
-    margin-top: 100px;
-   
+    margin-top: 50px;
+   background-color: gray;
 }
 footer img{
 
@@ -232,6 +293,10 @@ justify-content: center;
 {
     margin: 0 10px;
 }
+#silver
+{
+    background-color: white;
+}
 /* Footer Part Css End */
 
 /* -------------------------------
@@ -239,7 +304,7 @@ Media Queries
 ---------------------------------*/
 /* Mobile Devices */
 @media only screen and (max-width:688px) {
-    .Players
+    .foods
     {
 
         grid-template-columns: repeat(1,1fr);
@@ -275,7 +340,7 @@ top: 0px;
 }
 /* tablet devices */
 @media only screen and (min-width:688px) and (max-width:992px) {
-    .Players
+    .foods
     {
 
         grid-template-columns: repeat(2,1fr);
@@ -295,3 +360,23 @@ padding-right: 400px;
 }
 /* Media Queries End */
 /* The End */
+
+#header{
+    position: relative;
+}
+.header-options{
+    display:flex;
+    margin: 10px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.header-options li{
+    margin: 10px;
+    cursor: pointer;
+    color:white;
+}
+.header-options li:hover{
+    
+    color:red;
+}
