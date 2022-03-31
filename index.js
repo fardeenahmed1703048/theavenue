@@ -1,13 +1,16 @@
 const foodsDiv = document.getElementById('foods-div');
 const galleryDiv = document.getElementById('gallery-div');
 
-function galleryImages() {
+async function galleryImages() {
 
+    // let response = await fetch('https://salty-caverns-30855.herokuapp.com/allGalleryImages');
+    // let user = await response.json();
+    // console.log(user);
     galleryDiv.innerHTML = "";
-    fetch("http://localhost:8080/allGalleryImages")
+   await fetch("https://salty-caverns-30855.herokuapp.com/allGalleryImages")
         .then(res => res.json())
         .then(data => {
-            
+
             data.forEach(imageItem => {
                 const div = document.createElement("div");
                 div.innerHTML = `
@@ -21,9 +24,9 @@ function galleryImages() {
 
 galleryImages();
 
-function loadAllFoodItems() {
+async function loadAllFoodItems() {
     foodsDiv.innerHTML = "";
-    fetch("http://localhost:8080/allFoodItems")
+    await fetch("https://salty-caverns-30855.herokuapp.com/allFoodItems")
         .then(res => res.json())
         .then(data => {
             data.forEach(foodItem => {

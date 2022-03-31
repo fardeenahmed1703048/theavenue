@@ -20,9 +20,9 @@ const galleryForm = document.getElementById("galleryForm");
 
 
 
-function loadAllFoodItems() {
+async function loadAllFoodItems() {
     document.getElementById("loading1").style.display = "none";
-    fetch('http://localhost:8080/allFoodItems')
+    await fetch('https://salty-caverns-30855.herokuapp.com/allFoodItems')
         .then(res => res.json())
         .then(data => {
             document.getElementById("loading").style.display = "none";
@@ -46,9 +46,9 @@ function loadAllFoodItems() {
 loadAllFoodItems();
 
 
-function deleteFoodItem(event, id) {
-    console.log(event.target.parentNode);
-    fetch(`http://localhost:8080/delete/${id}`, {
+async function deleteFoodItem(event, id) {
+    // console.log(event.target.parentNode);
+    await fetch(`https://salty-caverns-30855.herokuapp.com/delete/${id}`, {
         method: 'DELETE',
     })
         .then(res => res.json())
@@ -57,9 +57,9 @@ function deleteFoodItem(event, id) {
         })
 }
 
-function loadUpdateItem(id) {
+async function loadUpdateItem(id) {
     document.getElementById("loading1").style.display = "block";
-    fetch(`http://localhost:8080/item/${id}`)
+    await fetch(`https://salty-caverns-30855.herokuapp.com/item/${id}`)
         .then(res => res.json())
         .then(data => {
             document.getElementById("loading1").style.display = "none";
@@ -76,12 +76,12 @@ function loadUpdateItem(id) {
 }
 
 
-function updateFoodItem(id) {
+async function updateFoodItem(id) {
     const inputImageData = document.getElementById('foodImage').files[0];
     const inputFoodName = document.getElementById('foodName').value;
     const inputFoodPrice = document.getElementById('foodPrice').value;
     const inputFoodDescription = document.getElementById('foodDescription').value;
-    console.log(inputImageData, inputFoodPrice, inputFoodDescription, inputFoodName)
+    // console.log(inputImageData, inputFoodPrice, inputFoodDescription, inputFoodName)
 
     const imgData = new FormData();
     imgData.append("file", inputImageData);
@@ -89,7 +89,7 @@ function updateFoodItem(id) {
     imgData.append("price", inputFoodPrice);
     imgData.append("description", inputFoodDescription);
 
-    fetch(`http://localhost:8080/update/${id}`, {
+   await fetch(`https://salty-caverns-30855.herokuapp.com/update/${id}`, {
         method: 'PATCH',
         body: imgData
     })
@@ -102,7 +102,7 @@ function updateFoodItem(id) {
 }
 
 
-addBtn.addEventListener("click", function (e) {
+addBtn.addEventListener("click",async function (e) {
     e.preventDefault();
 
     const inputImageData = imageData.files[0];
@@ -116,32 +116,33 @@ addBtn.addEventListener("click", function (e) {
     imgData.append("price", inputFoodPrice);
     imgData.append("description", inputFoodDescription);
 
-    fetch("http://localhost:8080/addFoodItem", {
+   await fetch("https://salty-caverns-30855.herokuapp.com/addFoodItem", {
         method: 'POST',
         body: imgData
     })
         .then(res => res.json())
         .then((res) => {
 
-            console.log(res)
+            // console.log(res)
             alert("Food item added successfully!")
             addFoodFrom.reset();
         })
         .catch((error) => {
-            console.log(error);
+            alert(error.message)
+            // console.log(error);
         });
-    console.log(inputImageData, inputFoodPrice, inputFoodDescription);
+    // console.log(inputImageData, inputFoodPrice, inputFoodDescription);
 
 })
 
 manageFood.addEventListener("click", (event) => {
-    console.log(event)
+    // console.log(event)
     manageGalleryDiv.style.display = "none";
     manageAdminDiv.style.display = "none";
     manageFoodDiv.style.display = "block";
 })
 
-manageGallery.addEventListener("click", (event) => {
+manageGallery.addEventListener("click", async (event) => {
     existingImages.innerHTML=""
     manageFoodDiv.style.display = "none";
     manageAdminDiv.style.display = "none";
@@ -149,7 +150,7 @@ manageGallery.addEventListener("click", (event) => {
     
     document.getElementById("loading2").style.display = "block";
 
-    fetch("http://localhost:8080/allGalleryImages")
+   await fetch("https://salty-caverns-30855.herokuapp.com/allGalleryImages")
     .then(res => res.json())
     .then(data => {
         document.getElementById("loading2").style.display = "none";
@@ -177,8 +178,8 @@ manageGallery.addEventListener("click", (event) => {
 
 })
 
-function deleteGalleryImage(event,id){
-    fetch(`http://localhost:8080/deleteImage/${id}`, {
+async function deleteGalleryImage(event,id){
+   await fetch(`https://salty-caverns-30855.herokuapp.com/deleteImage/${id}`, {
         method: 'DELETE',
     })
         .then(res => res.json())
@@ -187,26 +188,27 @@ function deleteGalleryImage(event,id){
         })
 }
 
-addGalleryBtn.addEventListener("click", (event) => {
+addGalleryBtn.addEventListener("click", async (event) => {
     event.preventDefault();
 
     const imageFile = document.getElementById("galleryImage").files[0];
     const imgData = new FormData();
     imgData.append("file", imageFile);
 
-    fetch("http://localhost:8080/addGalleryImage", {
+    await fetch("https://salty-caverns-30855.herokuapp.com/addGalleryImage", {
         method: 'POST',
         body: imgData
     })
         .then(res => res.json())
         .then((res) => {
 
-            console.log(res)
+            // console.log(res)
             alert("Food item added successfully!")
             galleryForm.reset();
         })
         .catch((error) => {
-            console.log(error);
+            alert(error.message);
+            // console.log(error);
         });
 })
 
@@ -222,13 +224,13 @@ manageAdmin.addEventListener('click', () =>{
     manageAdminDiv.style.display = "block";
 })
 
-addAdminBtn.addEventListener('click', (e)=>{
+addAdminBtn.addEventListener('click', async (e)=>{
     e.preventDefault();
 
     const regEmail = document.getElementById('regiEmail').value;
     const regPassword = document.getElementById('regiPassword').value;
 
-    fetch("http://localhost:8080/addAdmin",{
+    await fetch("https://salty-caverns-30855.herokuapp.com/addAdmin",{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({email: regEmail, password: regPassword})
